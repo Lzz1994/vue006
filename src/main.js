@@ -5,6 +5,12 @@ import VueRouter from "vue-router"
 Vue.use(VueRouter)
   
 
+// 2.1 导入 vue-resource
+import VueResource from 'vue-resource'
+// 2.2 安装 vue-resource
+Vue.use(VueResource)
+
+
 //导入mint-ui
 import MintUi from "mint-ui"
 
@@ -14,6 +20,15 @@ Vue.component(Header.name,Header)
 
 //导入mui
 import "./lib/mui/css/mui.min.css"
+
+// 导入扩展图标样式
+import './lib/mui/css/icons-extra.css'
+
+// 按需导入 Mint-UI 中的组件   
+import {Swipe, SwipeItem } from 'mint-ui'
+Vue.component(Swipe.name, Swipe)
+Vue.component(SwipeItem.name, SwipeItem)
+
 
 
 import app from "./App.vue"
